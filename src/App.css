@@ -15,3 +15,18 @@ a {
 h1 {
   font-size: 1.4rem;
 }
+
+/* Animação de Entrada da esqueda para direita */
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
