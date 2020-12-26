@@ -1,0 +1,17 @@
+body {
+  margin: 2rem;
+}
+
+img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
