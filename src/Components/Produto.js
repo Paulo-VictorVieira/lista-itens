@@ -36,9 +36,9 @@ const Produto = () => {
     }
     fetchProduto(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
   }, [id]);
-  console.log(produto);
+
   // Se o loading for verdadeiro, retorna uma pequena animação.
-  if (loading) return <div>Carregando...</div>;
+  if (loading) return <div className="loading"></div>;
   // Se existir erro, retorna a mensagem de erro.
   if (error) return <p>{error}</p>;
   // Verifica a existência dos produtos no fetch.
@@ -49,9 +49,12 @@ const Produto = () => {
         title={`Lista-Itens | ${produto.nome}`}
         description={`Lista-Itens | Esse é um produto: ${produto.nome}`}
       />
-      {produto.fotos.map((foto) => (
-        <img key={foto.src} src={foto.src} alt={foto.titulo} />
-      ))}
+      <div>
+        {' '}
+        {produto.fotos.map((foto) => (
+          <img key={foto.src} src={foto.src} alt={foto.titulo} />
+        ))}
+      </div>
       <div>
         <h1>{produto.nome}</h1>
         <span className={styles.preco}>R$: {produto.preco}</span>

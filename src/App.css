@@ -16,6 +16,20 @@ h1 {
   font-size: 1.4rem;
 }
 
+.App {
+  max-width: 40rem;
+  margin: 0 auto;
+  /* Técnica para evitar o salto na mudança de página com scroll */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+/* Segura a parte do meio do site */
+.content {
+  flex: 1;
+}
+
 /* Animação de Entrada da esqueda para direita */
 
 .animeLeft {
@@ -28,5 +42,22 @@ h1 {
   to {
     transform: initial;
     opacity: initial;
+  }
+}
+
+/* Animação do "C" do loading */
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
   }
 }
